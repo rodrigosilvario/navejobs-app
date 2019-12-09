@@ -6,32 +6,10 @@ class TabelaUsuario extends Component {
     return (
         <div className="table-responsive">
             <table className="table nave-tabela mt-4">
-                <thead>
-                    <tr> 
-                        <th scope="col">ID</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Vaga</th>
-                        <th scope="col">Data de Nascimento</th>
-                        <th scope="col">Email</th>
-                    </tr>
-                </thead>
+               <TableHeader/>
                 <tbody> 
                     <tr>
                         <th scope="row"><Link to="/usuarioDetalhe">1</Link></th>
-                        <td>Rodrigo Barbosa da Silva   </td>
-                        <td>Desenvolvedor Front-end</td>
-                        <td>05/02/1990</td>
-                        <td>rodrigo.silva.rio@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Rodrigo Barbosa da Silva   </td>
-                        <td>Desenvolvedor Front-end</td>
-                        <td>05/02/1990</td>
-                        <td>rodrigo.silva.rio@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
                         <td>Rodrigo Barbosa da Silva   </td>
                         <td>Desenvolvedor Front-end</td>
                         <td>05/02/1990</td>
@@ -42,6 +20,21 @@ class TabelaUsuario extends Component {
         </div>
     )
   }
+
 }
+
+const TableHeader = () => {
+    return (
+        <thead>
+            <tr> 
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Vaga</th>
+                <th scope="col">Data de Nascimento</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+    )
+  }
 
 export default TabelaUsuario
