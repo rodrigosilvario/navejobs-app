@@ -3,19 +3,12 @@ import { Link } from 'react-router-dom'
 
 class TabelaUsuario extends Component {
   render() {
+    const { listaUsuarios } = this.props
     return (
         <div className="table-responsive">
             <table className="table nave-tabela mt-4">
                <TableHeader/>
-                <tbody> 
-                    <tr>
-                        <th scope="row"><Link to="/usuarioDetalhe">1</Link></th>
-                        <td>Rodrigo Barbosa da Silva   </td>
-                        <td>Desenvolvedor Front-end</td>
-                        <td>05/02/1990</td>
-                        <td>rodrigo.silva.rio@gmail.com</td>
-                    </tr>
-                </tbody>
+               <TableBody listaUsuarios={listaUsuarios}/>
             </table>
         </div>
     )
@@ -35,6 +28,21 @@ const TableHeader = () => {
             </tr>
         </thead>
     )
+  }
+
+  const TableBody = (props) => {
+    const rows = props.listaUsuarios.map((row, index) => {
+        return (
+                <tr key={index}>
+                    <th scope="row"> <Link to={`/detalheUsuario/${index}`}>{index}</Link></th>
+                    <td>{row.nome}</td>
+                    <td>{row.vaga}</td>
+                    <td>{row.dataNascimento}</td>
+                    <td>{row.email}</td>
+                </tr>
+        )
+    })
+    return <tbody>{rows}</tbody>
   }
 
 export default TabelaUsuario

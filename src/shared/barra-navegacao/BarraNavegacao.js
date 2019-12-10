@@ -14,7 +14,7 @@ class BarraNavegacao extends Component {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
                 <Link to="/" className="nav-item nav-link active">Home</Link>
-                <Link to="/usuarios" className="nav-item nav-link active">Usuários</Link>
+                <Link to="/usuario" className="nav-item nav-link active">Usuários</Link>
             </div>
         </div>
         </nav>
