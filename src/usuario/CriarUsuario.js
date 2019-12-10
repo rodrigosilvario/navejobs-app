@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {adicionarUsuario} from './actions/UsuarioActions'
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom';
+
 
 class CriarUsuario extends Component {
   constructor(props){
