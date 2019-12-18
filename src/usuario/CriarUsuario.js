@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {adicionarUsuario} from './actions/UsuarioActions'
+import {adicionarUsuario} from '../redux/modules/user/actions/UsuarioActions'
 import { connect } from 'react-redux';
 
 

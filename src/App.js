@@ -1,36 +1,29 @@
-import React, { Component } from 'react'
+//NPM modules
+import React from 'react'
 import {Route, Switch} from 'react-router-dom';
-import BarraNavegacao from './shared/barra-navegacao/BarraNavegacao';
-import Home from './home/Home'
-import ListarUsuario from './usuario/ListarUsuario';
-import DetalharUsuario from './usuario/DetalharUsuario'
-import CriarUsuario from './usuario/CriarUsuario';
-import UsuarioAPI from './api/UsuarioAPI'
-import {inicializarStoreUsuarios} from './usuario/actions/UsuarioActions'
-import { connect } from 'react-redux';
+//components
+import NavigationBar from './components/NavigationBar';
+//screens
+import HomeContainer from './screens/HomeContainer'
+import UserContainer from './screens/UserContainer'
+import UserNewContainer from './screens/UserNewContainer'
+import UserDetailContainer from './screens/UserDetailContainer'
 
 
-
-class App extends Component {
+function App (props) {
   
-  async UNSAFE_componentWillMount() {
-    this.props.inicializarStoreUsuarios(await UsuarioAPI.getUsuarios())
-   }
-
-  render() {
     return (
         <div>
-          <BarraNavegacao />
+          <NavigationBar />
           <Switch>
-            <Route exact path="/"component={Home} />
-            <Route path="/usuario" component={ListarUsuario}/>
-            <Route path='/criarUsuraio' component={CriarUsuario} />
-            <Route path="/detalheUsuario/:id" component={DetalharUsuario} />
+            <Route exact path="/"component={HomeContainer} />
+            <Route exact path="/user" component={UserContainer}/>
+            <Route exact path="/user/new" component={UserNewContainer}/>
+            <Route exatc path="/user/detail/:id" component={UserDetailContainer} /> 
           </Switch>
         </div>
     )
-  }
+  
 }
 
-//export default App
-export default connect(undefined, {inicializarStoreUsuarios}) (App);
+export default App

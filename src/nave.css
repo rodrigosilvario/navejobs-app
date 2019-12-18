@@ -1,27 +1,24 @@
 body {
     background-color: #F0F0F0;
-}
-
-.nave-barra-navegacao {
-    background-color: #000000;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.nave-titulo-pagina {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
+}
+
+.nave-barra-navegacao {
+    background-color: #000000;
+    box-shadow: 0px 2px 8px rgba(201, 142, 142, 0.2);
+}
+
+.nave-titulo-pagina {
     color: #000000;
-    width: 96px;
+    width: 200px;
     height: 28px;
 }
 
 .nave-botao {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
@@ -29,15 +26,12 @@ body {
     background: #000000;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    width: 144px;
+    width: 200px;
     height: 36px;
 }
 
 
 .nave-tabela {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -48,6 +42,10 @@ body {
 
 .nave-tabela thead{
     color: #7C7C7C;
+}
+
+.nave-tabela .linkUserDetail{
+    color: #000000;
 }
 
 .nave-detalhe-usuario{
@@ -76,14 +74,6 @@ body {
     border: none;
 }
 
-.nave-formularioUsuario h4{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    color: #7C7C7C;
-}
 
 .nave-formularioUsuario input{ 
     border: none;
@@ -91,26 +81,28 @@ body {
     border-radius: 0;
     font-size: 16px;
     line-height: 19px;
-    
+    width: 320px;
 }
 
-.nave-formularioUsuario ::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 16px;
- }
-  
- .nave-formularioUsuario :-moz-placeholder { /* Firefox 18- */
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 16px;
- }
-  
- .nave-formularioUsuario ::-moz-placeholder {  /* Firefox 19+ */
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 16px;
- }
-  
- .nave-formularioUsuario :-ms-input-placeholder {  
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 16px;
- }
+.nave-formularioUsuario button{ 
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #000000;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 100px;
+    height: 36px;
+}
 
+.nave-toast-success {
+    font-size: 20px;
+    line-height: 16px;
+    height: 28px;
+    width: 300px;
+    text-align: center;
+    background-color: greenyellow;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
