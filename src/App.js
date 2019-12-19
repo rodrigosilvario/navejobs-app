@@ -8,6 +8,7 @@ import HomeContainer from './screens/HomeContainer'
 import UserContainer from './screens/UserContainer'
 import UserNewContainer from './screens/UserNewContainer'
 import UserDetailContainer from './screens/UserDetailContainer'
+import UserEditContainer from './screens/UserEditContainer'
 
 
 function App (props) {
@@ -19,7 +20,8 @@ function App (props) {
             <Route exact path="/"component={HomeContainer} />
             <Route exact path="/user" component={UserContainer}/>
             <Route exact path="/user/new" component={UserNewContainer}/>
-            <Route exatc path="/user/detail/:id" component={UserDetailContainer} /> 
+            <Route exatc path="/user/detail/:id" component={UserDetailContainer} />
+            <Route exatc path="/user/edit/:id" component={UserEditContainer} />
           </Switch>
         </div>
     )

@@ -17,7 +17,7 @@ function  UserNewContainer (props) {
                     <PageTitle title={"Criar Usuário"}/>
                 </div>
             </div>
-            <UserForm addNewUser={props.addNewUser}/>
+            <UserForm operationUser={props.addNewUser}/>
         </div>
     )
 }

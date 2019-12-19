@@ -14,22 +14,24 @@ toast.configure({
 //components
 
 const initialUserState = {
-    name : 'Bruno',
-    job : 'Desenv',
-    birthday : '05/02/1990',
-    email : 'teste@teste.com'
+    name : '',
+    job : '',
+    birthday : '',
+    email : ''
 }
 
 const history = createBrowserHistory();
 
 function  UserForm (props) {
     
-    const [user, setUser] = useState(initialUserState);
+    const [user, setUser] = useState(props.user === undefined ? initialUserState : props.user);
+    const [idUser] = useState(props.idUser === undefined ? undefined : props.idUser);
 
     function handleSubmit(event) {
-        props.addNewUser(user);
         event.preventDefault();
-        toast.success("Usuário Criado com Sucesso!", {hideProgressBar: true, className: "nave-toast-success"})
+        props.operationUser(user,idUser);
+        event.preventDefault();
+        toast.success("Operação realizada com Sucesso!", {hideProgressBar: true, className: "nave-toast-success"})
         history.goBack();
         
     }
